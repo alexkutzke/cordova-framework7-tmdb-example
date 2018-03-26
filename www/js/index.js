@@ -42,19 +42,19 @@ var mainView = app.views.create('.view-main');
 var $$ = Dom7;
 
 var apiUrl = "https://api.themoviedb.org/3";
-var apiKey = "<<<<<<<YOUR KEY>>>>>>>";
+var apiKey = "a3628b041522deebaf491195018bee0d";
 var compiledMovieList;
 var template;
-var configuration;	
+var configuration;
 
 function startApp(){
-	
+
 	template = $$('#movie-list').html();
 	compiledMovieList = Template7.compile(template);
-	
+
 	app.request.json(apiUrl + '/configuration?api_key='+apiKey, function (data) {
 		configuration = data;
-		
+
 		app.request.json(apiUrl + '/movie/top_rated?api_key='+apiKey+'&language=en-US&page=1', function (data) {
 
 			for(var i=0; i<data.results.length; i++)
@@ -71,4 +71,3 @@ function startApp(){
 }
 
 document.addEventListener('deviceready', startApp, false);
-
