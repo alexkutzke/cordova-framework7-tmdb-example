@@ -1,6 +1,6 @@
-# Cordova + Framework7 + IMDB Example
+# Cordova + Framework7 + TMDB Example
 
-Add you IMDB API Key into `www/js/index.js`, line 45:
+Add you TMDB API Key into `www/js/index.js`, line 45:
 
 ```js
 //..
